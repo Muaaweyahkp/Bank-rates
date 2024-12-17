@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'DS-Digital';
+    src: url('./assets/DS-DIGIT.TTF') format('truetype');
+    font-weight: normal;
+    font-style:normal;
+
+
+  }
+  body {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100cm   !important;
+  }
+
+  
+
+  .container {
+    width: 66cm;
+    height: 90cm;
+    background-color: #111;
+    border: 3px solid #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Header Section */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5.7cm;
+    margin-top: -2cm;
+  }
+
+  .header h1 {
+    font-size: 5.7rem;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    letter-spacing: 0.4cm;
+    color: #ffffff;
+  }
+
+  .header .brandLogo {
+    width: 30rem;
+  }
+
+  .todayRate {
+    font-size: 5rem;
+    text-align: center;
+    margin-top: -1.9cm;
+    color: #ffffff;
+    letter-spacing: 0.3cm;
+  }
+
+  /* Fixed Deposit Section */
+  
+  .fixed{
+    font-size: 4.3rem;
+    margin-top: -3cm;
+    color: #ffd700;
+    margin-left: 11.5cm;
+  }
+
+  .rates-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1cm;
+    padding: 1cm;
+    margin-left: 10.5cm;
+    margin-top: -2cm;
+
+  }
+
+  .rates {
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1.5cm;
+    letter-spacing: 0.3cm;
+
+  }
+
+  .rate-item {
+    font-size: 4.5rem;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .r2-rs {
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1cm;
+    letter-spacing: 0.3cm;
+    
+  }
+
+  .rate-count {
+    font-size: 6.2rem;
+    text-align: left;
+    color: #dd1717;
+    font-weight: bolder;
+    font-family: 'DS-Digital', sans-serif;
+  }
+
+  /* Gold Loan Section */
+
+
+  .gold-loan h2 {
+    font-size: 5rem;
+    color: green;
+    text-align: left;
+    margin-bottom: 0.5cm;
+    margin-left: 4cm;
+  }
+
+  .gold-loan-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    text-align: left;
+    margin-left: 7cm;
+    padding: 5px;
+  }
+
+  .gold-list {
+    padding: 15px;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+  }
+
+
+  .gold-loan-header-1{
+    color: #ffd700;
+    font-weight: 650;
+    font-size: 5rem;
+
+  }
+
+  .gold-loan-header-2 {
+    color:#ffffff;
+    font-weight: 650;
+    font-size: 5rem;
+    margin-left: 4cm;
+  }
+
+  .gold-loan-header-3 {
+    color:#ffffff;
+    font-weight: 650;
+    font-size: 5rem;
+  }
+
+  .gold-list-r{
+    padding: 15px;
+    color: #ff0000;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-left: 3cm;
+  }
+  .gold-list-g{
+    padding: 15px;
+    color: #ff0000;
+    font-weight: 600;
+    font-size: 4rem;
+    margin-left: 4cm;
+  
+  }
+
+  .timeDisplay{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 5rem;
+    color: #000000;
+    background-color: #ffffff;
+    height: 8cm;
+    padding: 0%;
+    margin: 0%;
+  }
+
+  #time{
+    border: 7px solid black;
+    padding-left: 5.5cm;
+    padding-right: 5.5cm;
+    padding-top: 0.7cm;
+    padding-bottom: 0.7cm;
+  }
+  #date{
+    border: 7px solid black;
+    padding-left: 4cm;
+    padding-right: 4cm;
+    padding-top: 0.7cm;
+    padding-bottom: 0.7cm;
+  }
+
+  .banner {
+  border: 2px solid green;
+  border-radius: 20px;
+  position: absolute;
+  margin-top: 78cm;
+  background-color: grey;
+  width: 66cm;
+  height: 12cm;
+  overflow: hidden; 
+  }
+
+
+  .swiper {
+  width: 100%;
+  height: 100%;
+  }
+
+  .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  }

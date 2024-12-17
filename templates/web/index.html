@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Rate Display Board</title>
+  <link rel="stylesheet" href="{% static "web\css\style.css" %}">
+  
+
+</head>
+<body>
+  <div class="container">
+    <div class="timeDisplay">
+      <h3 id="time">10:30 AM</h3>
+      <h3 id="date">JULY 24, 2022</h3>
+    </div>
+    <!-- Bank Header -->
+    <div class="header">
+      <img src="{% static "web/img/cBankLogo-removebg-preview.png" %}" alt="Bank Logo" class="brandLogo">
+      <h1>
+        CALICUT CITY <br>
+        SERVICE CO-OP <br>
+        BANK LTD.
+      </h1>
+    </div>
+    <h3 class="todayRate">TODAY'S RATE OF INTEREST (%)</h3>
+
+    <div class="fixed">
+      <h3>FIXED DEPOSIT*</h3>
+    </div>
+    <!-- Fixed Deposit Section -->
+    <div class="rates-container">
+      <!-- Rate Items -->
+      <div class="rates">
+        <div class="rate-item">15 TO 45 DAYS</div>
+        <div class="rate-item">46 TO 90 DAYS</div>
+        <div class="rate-item">91 TO 179 DAYS</div>
+        <div class="rate-item">180 TO 364 DAYS</div>
+        <div class="rate-item">12 MONTHS</div>
+        <div class="rate-item">13 TO 23 MONTHS</div>
+        <div class="rate-item">24 MONTHS AND MORE</div>
+      </div>
+
+      <!-- Rate Counts -->
+      <div class="r2-rs">
+        <div class="rate-count">00.00</div>
+        <div class="rate-count">00.00</div>
+        <div class="rate-count">00.00</div>
+        <div class="rate-count">00.00</div>
+        <div class="rate-count">00.00</div>
+        <div class="rate-count">00.00</div>
+        <div class="rate-count">00.00</div>
+      </div>
+    </div>
+
+    <!-- Gold Loan Section -->
+    <div class="gold-loan">
+      <h2>0.5% EXTRA FOR SENIOR CITIZEN</h2>
+      <div class="gold-loan-table">
+        <div class="gold-loan-header-1">GOLD LOAN</div>
+        <div class="gold-loan-header-2">ROI</div>
+        <div class="gold-loan-header-3">RATE/GRAM</div>
+        <div class="gold-list">PONTHARA</div>
+        <div class="gold-list-r">10.55</div>
+        <div class="gold-list-g">7553</div>
+        <div class="gold-list">SWARNA PRABHA</div>
+        <div class="gold-list-r">10.55</div>
+        <div class="gold-list-g">7553</div>
+        <div class="gold-list">PONVILA</div>
+        <div class="gold-list-r">10.55</div>
+        <div class="gold-list-g">7553</div>
+        <div class="gold-list">KANAK SURAKSHA</div>
+        <div class="gold-list-r">10.55</div>
+        <div class="gold-list-g">7553</div>
+        <div class="gold-list">KCC (GOLD)</div>
+        <div class="gold-list-r">10.55</div>
+        <div class="gold-list-g">7553</div>
+      </div>
+    </div>
+    <div class="banner">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="{% static "web/img/banner-ads-examples-ncino.webp" %}" alt=""></div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  
+  </div>
+  
+<script>
+    function updateDateTime() {
+        const now = new Date();
+
+        // Format Date as DD/MM/YY
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+        const year = String(now.getFullYear()).slice(-2);
+        const formattedDate =  `${day}/${month}/${year}`;
+
+        // Format Time as HH.MM
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const formattedTime = ` ${hours}.${minutes}`;
+
+        // Update the content of date and time
+        document.getElementById('date').innerText = formattedDate;
+        document.getElementById('time').innerText = formattedTime;
+    }
+
+    // Update every second
+    setInterval(updateDateTime, 1000);
+
+    // Run the function once on page load
+    updateDateTime();
+</script>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9.0.1/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical", // Vertical slider
+      loop: true,            // Infinite loop
+      autoplay: {            // Autoplay settings
+        delay: 2000,         // Delay between slides (in milliseconds)
+        disableOnInteraction: false, // Keeps autoplay active even after user interaction
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,     // Makes pagination dots clickable
+      },
+    });
+</script>
+  
+</body>
+</html>
